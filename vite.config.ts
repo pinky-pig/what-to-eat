@@ -3,9 +3,8 @@ import vue from '@vitejs/plugin-vue'
 import Unocss from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
-
 import path from 'path'
-// https://vitejs.dev/config/
+
 export default defineConfig({
   plugins: [
     vue(),
@@ -25,7 +24,7 @@ export default defineConfig({
     }),
     Components({
       // 指定组件位置，默认是src/components
-      dirs: ['src/components/common'],
+      dirs: ['src/components/theme'],
       extensions: ['vue'],
       // 配置文件生成位置
       dts: 'components.d.ts'
@@ -33,6 +32,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
+      '@': path.resolve(__dirname,'src'),
       '~': path.resolve(__dirname,'src')
     }
   },
