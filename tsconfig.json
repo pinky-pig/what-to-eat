@@ -1,20 +1,21 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
+    "target": "esnext",
+    "noUnusedLocals": false,
     "useDefineForClassFields": true,
-    "module": "ESNext",
-    "moduleResolution": "Node",
+    "module": "esnext",
+    "moduleResolution": "node",
     "strict": true,
     "jsx": "preserve",
     "sourceMap": true,
     "resolveJsonModule": true,
-    "isolatedModules": true,
     "esModuleInterop": true,
-    "lib": ["ESNext", "DOM"],
-    "skipLibCheck": true,
-    "types": ["node"],
+    "suppressImplicitAnyIndexErrors": true,
+    "lib": ["esnext", "dom"],
+    "types": ["vite/client"],
     "paths": {
-			"~/*": ["./src/*"],
+			"@/*": ["./src/*"],
+			"~/*": ["./*"]
 		},
   },
   "include": [
@@ -22,6 +23,7 @@
     "src/**/*.d.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
+    "src/typings/**/*.d.ts",
     "vite.config.*",
     "components.d.ts",
     "auto-imports.d.ts",
@@ -30,6 +32,4 @@
 		"/dist/**",
 		"node_modules"
 	],
-
-  "references": [{ "path": "./tsconfig.node.json" }]
 }

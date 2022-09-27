@@ -1,32 +1,52 @@
 <script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
+import Container from './views/index.vue'
 </script>
 
 <template>
-  <div class=" text-green-400 text-xl">UnoCss</div>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <Container />
+
+  <div class="gradient-bg">
+    <div class="gradient-top"></div>
+    <div class="gradient-bottom"></div>
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+<style lang="less" scoped>
+@import './styles/constant.less';
+.gradient-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  .gradient-style(@color) {
+    position: absolute;
+    width: 100vh;
+    height: 100vh;
+    background-image: radial-gradient(
+      rgba(@color, 0.8) 20%,
+      rgba(@color, 0.6) 40%,
+      rgba(@color, 0.4) 60%,
+      rgba(@color, 0.2) 80%,
+      transparent 100%
+    );
+    border-radius: 50%;
+    opacity: 0.2;
+    filter: blur(4rem);
+  }
+
+  .gradient-top {
+    .gradient-style(@second-color);
+    top: -50%;
+    right: -20%;
+  }
+
+  .gradient-bottom {
+    .gradient-style(@primary-color);
+    bottom: -50%;
+    left: -20%;
+  }
 }
 </style>

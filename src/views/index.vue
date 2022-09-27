@@ -1,6 +1,6 @@
 <template>
-  <div class="w-screen h-screen flex justify-center items-center">
-    <div class="text-3xl text-green-300"> Vite Vue3 Project</div>
+  <div id="container" class="w-screen h-screen bg-[#14161a]">
+    <div i-carbon-dicom-overlay />
   </div>
 </template>
 <script setup lang="ts">
