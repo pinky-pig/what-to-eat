@@ -5,6 +5,7 @@ import Gradient from './views/gradient/index.vue'
 
 <template>
   <Container />
+  <ConfettiCanvas />
   <Gradient />
 </template>
 

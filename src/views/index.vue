@@ -1,17 +1,25 @@
 <template>
-  <div id="container" class="w-screen h-screen bg-[#14161a] flex items-center justify-center">
-    <Canvas></Canvas>
+  <div id="container" class="  w-screen h-screen bg-[#14161a] flex flex-col items-center justify-center gap-8">
+    <Playground></Playground>
     
-    <div class=" flex-center gap-8 z-20">
-      <div class="cursor-pointer flex w-24 h-10 bg-[#2a2f37] rounded-md text-[#a4b2c1] font-bold flex-center"> 更换主题 </div>
-    
-      <div class="cursor-pointer flex w-24 h-10 bg-[#2a2f37] rounded-md text-[#a4b2c1] font-bold flex-center"> 更换主题 </div>
+    <div class="flex-center gap-8 z-20">
+      <div class="btn" @click="select"> 选 择 </div>
+      <div class="btn"> 更换主题 </div>
     </div>
-
 
   </div>
 </template>
 <script setup lang="ts">
-import Canvas from './canvas/index.vue';
-    
+import { showConfetti } from '@/composables';
+import Playground from './playground/index.vue'
+
+const select = () => {
+  showConfetti()
+}
 </script>
+
+<style lang="less" scoped>
+.btn{
+  @apply cursor-pointer flex w-24 h-10 bg-[#2a2f37] rounded-md text-[#a4b2c1] font-bold flex justify-center items-center;
+}
+</style>

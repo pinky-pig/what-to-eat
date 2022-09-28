@@ -24,7 +24,7 @@ export default defineConfig({
     }),
     Components({
       // 指定组件位置，默认是src/components
-      dirs: ['src/components/theme'],
+      dirs: ['src/components'],
       extensions: ['vue'],
       // 配置文件生成位置
       dts: 'components.d.ts'
