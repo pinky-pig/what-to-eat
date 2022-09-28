@@ -1,8 +1,8 @@
 <template>
-  <div id="container" class="  w-screen h-screen bg-[#14161a] flex flex-col items-center justify-center gap-8">
+  <div id="container" class=" w-screen h-screen bg-[#14161a] flex flex-col items-center justify-center gap-24">
     <Playground></Playground>
     
-    <div class="flex-center gap-8 z-20">
+    <div class="flex-center gap-24 z-30">
       <div class="btn" @click="select"> 选 择 </div>
       <div class="btn"> 更换主题 </div>
     </div>

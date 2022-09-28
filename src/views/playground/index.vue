@@ -1,8 +1,8 @@
 <template>
-  <div class="w-4/5 h-3/5 z-20 rounded-xl bg-blue-200/5 relative">
+  <div class="w-4/5 h-3/5 z-10 rounded-xl bg-blue-200/5 relative">
     <!-- <img class="w-full h-full object-contain" src="@/assets/theme/one/背景.png" alt=""> -->
 
-    <img class="absolute top-0 w-full z-10" src="@/assets/theme/one/header.png" />
+    <img class="absolute top-0 w-full h-10% z-10" src="@/assets/theme/one/header.png" />
     
     <svg class="w-full h-full absolute" >
       <defs>
