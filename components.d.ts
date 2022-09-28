@@ -8,7 +8,6 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Gradient: typeof import('./src/components/theme/Gradient.vue')['default']
-    Green: typeof import('./src/components/theme/Green.vue')['default']
     Restaurant: typeof import('./src/components/theme/Restaurant.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

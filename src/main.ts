@@ -2,12 +2,11 @@ import { createApp } from 'vue'
 import './styles/style.css'
 import App from './App.vue'
 import 'uno.css'
-import { setupRouter } from './router'
+import { setupStore } from './store'
 
 async function setupApp() {
   const app = createApp(App)
-  // 挂载路由
-  await setupRouter(app)
+  setupStore(app)
   app.mount('#app')
 }
 setupApp()

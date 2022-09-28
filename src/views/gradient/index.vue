@@ -4,8 +4,8 @@
     <div class="gradient-bottom"></div>
   </div>
 </template>
-<script setup lang="ts"> 
-    
+<script setup lang="ts">
+
 </script>
 <style lang="less" scoped>
   @import '~/styles/constant.less';
@@ -13,8 +13,8 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     overflow: hidden;
   
     .gradient-style(@color) {
@@ -45,5 +45,4 @@
       left: -20%;
     }
   }
-  </style>
-  
+</style>

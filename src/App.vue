@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import Container from './views/index.vue'
-import Theme from './views/theme/index.vue'
+import Gradient from './views/gradient/index.vue'
 </script>
 
 <template>
   <Container />
-  <Theme />
+  <Gradient />
 </template>
 
