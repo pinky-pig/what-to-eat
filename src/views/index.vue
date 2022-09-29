@@ -12,9 +12,12 @@
 <script setup lang="ts">
 import { showConfetti } from '@/composables';
 import Playground from './playground/index.vue'
+import { Sortition } from '@/composables';
+let sort = new Sortition(8)
 
-const select = () => {
+const select = () => { 
   showConfetti()
+  sort.start()
 }
 </script>
 

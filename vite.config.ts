@@ -6,6 +6,7 @@ import Components from 'unplugin-vue-components/vite'
 import path from 'path'
 
 export default defineConfig({
+  base:'/what-to-eat/',
   plugins: [
     vue(),
     Unocss({ /* options */ }),

@@ -8,9 +8,7 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     ConfettiCanvas: typeof import('./src/components/ConfettiCanvas.vue')['default']
-    Gradient: typeof import('./src/components/theme/Gradient.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
-    Restaurant: typeof import('./src/components/theme/Restaurant.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
