@@ -46,13 +46,12 @@ export class Sortition{
   runCircle(){
     console.log('步数',this.current_index)
 
-    let domArr = document.getElementsByClassName('item') as any
-    for (let i = 0; i < domArr.length; i++) {
-      const element = domArr[i] as HTMLElement
-      if (Number( element.dataset.order) == this.current_index ) {
-        element.style.outline = ''
-      }
+    let name = 'item' + this.current_index
+    let domArr = document.getElementsByClassName(name) as any
+    if (domArr[0]) {
+      domArr[0].style.outline = ''
     }
+
 
     this.current_index += 1
     // 如果当前下标大于总项就置零从头开始
@@ -61,11 +60,10 @@ export class Sortition{
     }
     console.log('步数+=',this.current_index)
 
-    for (let i = 0; i < domArr.length; i++) {
-      const element = domArr[i] as HTMLElement
-      if (Number( element.dataset.order) == this.current_index ) {
-        element.style.outline = '5px solid white'
-      }
+    let name1 = 'item' + this.current_index
+    let domArr1 = document.getElementsByClassName(name1) as any
+    if (domArr1[0]) {
+      domArr1[0].style.outline = '5px solid white'
     }
   }
 }
