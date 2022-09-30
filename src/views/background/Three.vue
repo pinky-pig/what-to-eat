@@ -8,6 +8,7 @@
     <div data-order="5" class="item5 bg-blue-500">5</div>
     <div data-order="6" class="item6 bg-purple-200">6</div>
     <div data-order="7" class="item7 bg-black">7</div>
+    <div data-order="8" class="item8 bg-amber-800"></div>
   </div>
   
 </template>
@@ -17,14 +18,14 @@
 <style lang="less" scoped>
 .box{
   display: grid;
-  grid-template-columns: 100px 100px 100px;
   grid-template-rows: 100px 100px 100px;
+  grid-template-columns: 100px 100px 100px;
   grid-template-areas: 'a b c'
-                      'd . f'
-                      'g h i';
+                      'h i d'
+                      'g f e';
 }
 .item{
-  @apply w-50px h-50px;
+  @apply w-50px h-50px text-white flex justify-center items-center;
 }
 
 .item0{
@@ -41,15 +42,15 @@
 }
 .item3{
   .item;
-  grid-area: f;
+  grid-area: d;
 }
 .item4{
   .item;
-  grid-area: i;
+  grid-area: e;
 }
 .item5{
   .item;
-  grid-area: h;
+  grid-area: f;
 }
 .item6{
   .item;
@@ -57,6 +58,10 @@
 }
 .item7{
   .item;
-  grid-area: d;
+  grid-area: h;
+}
+.item8{
+  .item;
+  grid-area: i;
 }
 </style>

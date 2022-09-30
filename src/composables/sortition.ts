@@ -1,3 +1,4 @@
+import { showConfetti } from '@/composables';
 
 
 export class Sortition{
@@ -17,6 +18,9 @@ export class Sortition{
     this.speed = 100
     this.result = -1
     this.controllSpeed();
+    // 显示结果--可修改优化
+    let domArr1 = document.getElementsByClassName('item8')
+    domArr1[0].innerHTML =  ''
   }
   controllSpeed(){
     this.jumps += 1
@@ -24,7 +28,13 @@ export class Sortition{
     // 抽中
     if (this.jumps > this.min_jumps + 10 && this.result === this.current_index) {
       clearTimeout(this.timer)
-      alert('抽中了'+this.current_index);
+      // 显示烟花
+      showConfetti()
+
+      // 显示结果--可修改优化
+      let domArr1 = document.getElementsByClassName('item8')
+      domArr1[0].innerHTML = this.current_index + ''
+
       this.result = -1
       this.jumps = 0
     } else {
@@ -46,6 +56,7 @@ export class Sortition{
   runCircle(){
     console.log('步数',this.current_index)
 
+    // 显示结果--可修改优化
     let name = 'item' + this.current_index
     let domArr = document.getElementsByClassName(name) as any
     if (domArr[0]) {
@@ -60,10 +71,11 @@ export class Sortition{
     }
     console.log('步数+=',this.current_index)
 
+    // 显示结果--可修改优化
     let name1 = 'item' + this.current_index
     let domArr1 = document.getElementsByClassName(name1) as any
     if (domArr1[0]) {
-      domArr1[0].style.outline = '5px solid white'
+      domArr1[0].style.outline = '5px solid #5F6CAF'
     }
   }
 }
